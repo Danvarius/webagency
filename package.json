@@ -1,7 +1,7 @@
 {
-  "name": "cat-energy-20",
+  "name": "web-agency",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Личный проект Web-Agency",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.x",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Danvarius/CatEnergy"
+    "url": "https://github.com/Danvarius/webagency"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

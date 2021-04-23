@@ -1,0 +1,24 @@
+@import 'add/variables';
+@import 'add/extend';
+@import 'add/fonts';
+@import 'add/normalize';
+@import 'add/visually-hidden';
+@import 'add/bemblock';
+
+@import 'body/body';
+
+@import 'header/header';
+
+@import 'footer/footer';
+
+@import 'main/firstpage';
+@import 'main/about';
+@import 'main/bestprojects';
+@import 'main/latestblog';
+@import 'main/contacts';
+
+@import 'singlework/video-project';
+
+@import 'singlepost/singlepost';
+@import 'singlepost/comments';
+@import 'singlepost/leave-comment';

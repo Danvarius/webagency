@@ -1,0 +1,58 @@
+html {
+   scroll-behavior: smooth;
+}
+
+.page-body {
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+
+   width: 100%;
+   min-width: 320px;
+
+   .page-body__img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      height: 650px;
+      z-index: -1;
+
+      background-image: url('../img/bg-main.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      background-size: cover;
+
+      filter: brightness(40%);
+   }
+}
+
+@media (min-width: 332px) {
+   .page-body {
+
+      .page-body__img {
+         height: 600px;
+      }
+   }
+}
+
+@media (min-width: 365px) {
+   .page-body {
+
+      .page-body__img {
+         height: 550px;
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .page-body {
+
+      .page-body__img {
+         height: 640px;
+      }
+   }
+}

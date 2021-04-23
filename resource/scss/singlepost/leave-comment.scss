@@ -1,0 +1,21 @@
+.leave-comment {
+   background-color: #f6f6f6;
+}
+
+.leave-comment__wrapper {
+   padding: 50px 20px;
+}
+
+@media (min-width: $tablet) {
+   .leave-comment__wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+   }
+}
+
+.leave-comment__title {
+   font-size: 30px; 
+   margin: 0 0 45px 0;
+
+   @extend %playfair-display-bold;
+}

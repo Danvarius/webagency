@@ -1,0 +1,79 @@
+
+.best-projects__wrapper {
+   padding: 40px 0;
+
+   background-image: url('../img/bg-pattern.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+@media (min-width: $tablet) {
+   .best-projects__wrapper {
+      padding: 60px 0;
+   }
+}
+
+@media (min-width: 1000px) {
+   .best-projects__wrapper {
+      padding: 80px 0;
+   }
+}
+
+@media (min-width: $desktop) {
+   .best-projects__wrapper {
+      padding: 100px 0;
+   }
+}
+
+
+.best-projects__comment {
+   max-width: 566px;
+
+   margin: 0 auto 25px auto;
+   padding: 0 20px;
+
+   font-size: 25px;
+   line-height: 35px;
+   text-align: center;
+   letter-spacing: 2px;
+   color: #ffffff;
+
+   @extend %playfair-display-regular;
+}
+
+@media (min-width: $desktop) {
+   .best-projects__comment {
+      max-width: 900px;
+   }
+}
+
+.best-projects__name {
+   display: block;
+   margin-bottom: 30px;
+
+   font-size: 15px;
+   text-transform: uppercase;
+   text-align: center;
+   color: #ffffff;
+
+   @extend %work-sans-regular;
+}
+
+@media (min-width: $desktop) {
+   .best-projects__name {
+      margin-bottom: 80px;
+   }
+}
+
+.best-projects__list-images {
+   max-width: 1100px;
+   list-style: none;
+   padding: 20px 15px;
+   margin: 0 auto;
+
+   cursor: grab;
+   .best-projects__picture {
+      width: 145px;
+      height: 120px;
+   }
+}

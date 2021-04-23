@@ -19,7 +19,7 @@ const htmlmin      = require('gulp-htmlmin');
 //Styles
 
 function styles() {
-  return src("source/scss/style.scss")
+  return src("resource/scss/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(scss())
@@ -31,19 +31,19 @@ function styles() {
       )
     ]))
     .pipe(csso())
-    .pipe(dest("source/css"))
+    .pipe(dest("resource/css"))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(dest("source/css"))
+    .pipe(dest("resource/css"))
     .pipe(browserSync.stream());
 }
 
 //Htmlmin
 
 function minhtml() {
-  return src("source/*.html")
+  return src("resource/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest('build'));
+    .pipe(dest('dist'));
 }
 
 //Server
@@ -51,7 +51,7 @@ function minhtml() {
 function server(done) {
   browserSync.init({
     server: {
-      baseDir: "source"
+      baseDir: "resource"
     },
     cors: true,
     notify: false,
@@ -63,7 +63,7 @@ function server(done) {
 //Imagemin
 
 function optimization() {
-  return src("source/img/*.{jpg,png,svg}")
+  return src("resource/img/*.{jpg,jpeg,png,svg}")
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -76,24 +76,24 @@ function optimization() {
     })
 
     ]))
-    .pipe(dest("build/img"));
+    .pipe(dest("dist/img"));
 }
 
 //Webp
 
 function imagewebp() {
-  return src("source/img/*.{jpg,png}")
+  return src("resource/img/*.{jpg,jpeg,png}")
     .pipe(webp({quality: 100}))
-    .pipe(dest("build/img"));
+    .pipe(dest("dist/img"));
 }
 
 //Scripts
 
 function scripts() {
-  return src("source/js/main.js")
+  return src("resource/js/main.js")
     .pipe(rename("main.min.js"))
     .pipe(uglify())
-    .pipe(dest("source/js"))
+    .pipe(dest("resource/js"))
     .pipe(browserSync.stream());
 }
 
@@ -101,31 +101,31 @@ function scripts() {
 
 function build() {
   return src ([
-    "source/css/**/*.css",
-    "source/fonts/**/*",
-    "source/js/main.min.js",
-  ], {base: "source"})
-    .pipe(dest("build"));
+    "resource/css/**/*.css",
+    "resource/fonts/**/*",
+    "resource/js/main.min.js",
+  ], {base: "resource"})
+    .pipe(dest("dist"));
 }
 
 //Github
 
 function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), "./build"), cb);
+  ghPages.publish(path.join(process.cwd(), "./dist"), cb);
 }
 
 //Del
 
 function cleanBuild() {
-  return del("build");
+  return del("dist");
 }
 
 //Watcher
 
 function watcher() {
-  watch("source/scss/**/*.scss", series("styles"));
-  watch("source/js/*.js", series("scripts"));
-  watch("source/*.html").on("change",browserSync.reload);
+  watch("resource/scss/**/*.scss", series("styles"));
+  watch("resource/js/*.js", series("scripts"));
+  watch("resource/*.html").on("change",browserSync.reload);
 }
 
 //Exports

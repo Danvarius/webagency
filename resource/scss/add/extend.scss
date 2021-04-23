@@ -1,0 +1,42 @@
+%playfair-display-bold {
+   font-family: 'Playfair Display';
+   font-style: normal;
+   font-weight: 800;
+   color: $basic-black;
+}
+
+%playfair-display-regular {
+   font-family: 'Playfair Display';
+   font-style: normal;
+   font-weight: 400;
+   color: $basic-black;
+}
+
+%work-sans-medium {
+   font-family: 'Work Sans', sans-serif;
+   font-style: normal;
+   font-weight: 500;
+   color: #ffffff;
+   text-transform: uppercase;
+}
+
+%work-sans-regular {
+   font-family: 'Work Sans', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   color: #848484;
+   line-height: 25px;
+}
+
+%transition {
+   &:hover {
+      opacity: 0.7;
+      transition: opacity 0.4s ease;
+   }
+
+   &:active {
+      opacity: 0.5;
+      transition: none;
+   }
+}
+

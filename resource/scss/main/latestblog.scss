@@ -1,0 +1,158 @@
+.latest-blog {
+   background-color: #f5f5f5;
+   padding: 40px 0 20px 0;
+}
+
+@media (min-width: $tablet) {
+   .latest-blog {
+      padding: 80px 0 60px 0;
+   }
+   
+}
+
+.latest-blog-flex__wrapper {
+   display: flex;
+   flex-wrap: wrap;
+
+   padding: 0 20px 30px 20px;
+   box-sizing: border-box;
+}
+
+@media (min-width: $tablet) {
+   
+   .latest-blog-flex__wrapper {
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 81.80%;
+   }
+}
+
+@media (min-width: $desktop) {
+   
+   .latest-blog-flex__wrapper {
+      max-width: 1400px;
+   }
+}
+
+.latest-blog-flex__wrapper--blog {
+   display: block;
+}
+
+.latest-blog__title {
+   margin: 0 0 30px 0;
+}
+
+.latest-blog__text {
+   max-width: 671px;
+   margin: 0 auto 70px auto;
+}
+
+.latest-blog__box {
+   position: relative;
+   width: 87.50%;
+   margin: 0;
+   height: 100%;
+
+   background-color: #ffffff;
+
+   .latest-blog__link {
+      display: block;
+      opacity: 1;
+
+      @extend %transition;
+   }
+   
+   .latest-blog__img {
+      width: 100%;
+      object-fit: cover;
+   }   
+
+   .latest-blog__category {
+      position: absolute;
+      top: 140px;
+      left: 11px; 
+
+      width: 70px;
+      padding: 7px 10px;
+
+      font-size: 13px;
+      color: #ffffff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      background-color: $basic-black;
+      
+      @extend %work-sans-regular;
+   }
+}
+
+
+@media (min-width: $tablet) {
+   .latest-blog__box {
+      height: 650px;
+      margin-right: 30px;
+   }
+}
+
+@media (min-width: 1100px) {
+   .latest-blog__box {
+      height: 100vh;
+   }
+}
+
+.latest-blog__box--blog {
+   margin: 0 auto 70px auto;
+}
+
+@media (min-width: $tablet) {
+
+   .latest-blog__box--blog {
+      width: 100%;
+      max-width: 650px;
+   
+      .latest-blog__img--blog {
+         height: 500px;
+      }
+
+      .latest-blog__category--blog {
+         top: 445px;
+         left: 18px;
+      }
+   }
+}
+
+.latest-blog__cover {
+   padding: 30px 30px 15px 30px;
+
+   .latest-blog__heading-link {
+      display: block;
+      margin: 0 0 16px 0;
+
+
+      font-size: 21px;
+      text-decoration: none;
+      opacity: 1;
+
+      @extend %playfair-display-bold;
+
+      @extend %transition;
+   }
+
+   .latest-blog__time {
+      color: #000000;
+
+      @extend %work-sans-regular;
+   }
+
+   .latest-blog__description {
+      width: 90%;
+      
+      @extend %work-sans-regular;
+   }
+}
+
+.best-projects-circles--latest-blog {
+   width: 95px;
+   margin-top: 20px;
+}
