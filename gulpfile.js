@@ -104,7 +104,7 @@ function dist() {
     "resource/css/**/*.css",
     "resource/fonts/**/*",
     "resource/js/main.min.js",
-    "resource/slick/**/*",
+    "resource/slick/**/*"
   ], {base: "resource"})
     .pipe(dest("dist"));
 }
