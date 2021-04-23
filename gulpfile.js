@@ -99,7 +99,7 @@ function scripts() {
 
 //Copy
 
-function build() {
+function dist() {
   return src ([
     "resource/css/**/*.css",
     "resource/fonts/**/*",
@@ -136,10 +136,10 @@ exports.optimization = optimization;
 exports.imagewebp    = imagewebp;
 exports.scripts      = scripts;
 exports.watcher      = watcher;
-exports.build        = build;
+exports.dist          = dist;
 exports.cleanBuild   = cleanBuild;
 exports.deploy       = deploy;
 exports.minhtml      = minhtml;
 
-exports.build   = series(cleanBuild, minhtml, styles, scripts, optimization, imagewebp, build);
+exports.build   = series(cleanBuild, minhtml, styles, scripts, optimization, imagewebp, dist);
 exports.default = series(styles, scripts, server, watcher);
