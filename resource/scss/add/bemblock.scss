@@ -488,6 +488,10 @@
    }
 }
 
+.slick-slide:active, .slick-slide:focus {
+   outline: none;
+}
+
 .slick-dots {
    bottom: 17px;
 }
