@@ -104,6 +104,7 @@ function dist() {
     "resource/css/**/*.css",
     "resource/fonts/**/*",
     "resource/js/main.min.js",
+    "resource/slick/**/*",
   ], {base: "resource"})
     .pipe(dest("dist"));
 }
@@ -136,7 +137,7 @@ exports.optimization = optimization;
 exports.imagewebp    = imagewebp;
 exports.scripts      = scripts;
 exports.watcher      = watcher;
-exports.dist          = dist;
+exports.dist         = dist;
 exports.cleanBuild   = cleanBuild;
 exports.deploy       = deploy;
 exports.minhtml      = minhtml;
